@@ -115,7 +115,7 @@ export function App() {
 
       {/* Top bar minimalista */}
       <header className="relative z-10">
-        <div className="mx-auto flex max-w-2xl items-center justify-end px-4 pt-4 pb-1">
+        <div className="mx-auto flex max-w-2xl items-center justify-end px-4 pt-2.5 pb-0 sm:pt-4 sm:pb-1">
           <Tooltip>
             <TooltipTrigger asChild>
               <Button
@@ -145,15 +145,15 @@ export function App() {
       </header>
 
       {/* Conteúdo principal */}
-      <main className="relative z-10 flex flex-1 flex-col px-4 pt-3 pb-10 sm:pt-5 sm:pb-14">
+      <main className="relative z-10 flex flex-1 flex-col px-4 pt-1 pb-4 sm:pt-5 sm:pb-14">
         <div className="mx-auto w-full max-w-2xl">
           {/* Hero compacto + Botão */}
           <section className="text-center">
-            <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+            <h1 className="text-2xl font-bold tracking-tight text-foreground sm:text-4xl">
               Parceiro Aleatório
             </h1>
 
-            <div className="mt-7 flex flex-col items-center gap-2.5">
+            <div className="mt-4 flex flex-col items-center gap-2.5 sm:mt-7">
               <motion.div
                 whileHover={shouldReduceMotion ? undefined : { scale: 1.02 }}
                 whileTap={shouldReduceMotion ? undefined : { scale: 0.97 }}
@@ -163,7 +163,7 @@ export function App() {
                   type="button"
                   size="lg"
                   onClick={sortearParceiro}
-                  className="h-11 cursor-pointer gap-2.5 rounded-xl px-6 text-sm font-medium shadow-sm"
+                  className="h-10 cursor-pointer gap-2 rounded-xl px-5 text-sm font-medium shadow-sm sm:h-11 sm:gap-2.5 sm:px-6"
                 >
                   <motion.span
                     animate={
@@ -195,7 +195,7 @@ export function App() {
           {/* Área de resultado abaixo do botão */}
           <AnimatePresence>
             {parceiroAtual && (
-              <section className="mt-8">
+              <section className="mt-5 sm:mt-8">
                 <PartnerCard
                   key="partner-card"
                   parceiro={parceiroAtual}

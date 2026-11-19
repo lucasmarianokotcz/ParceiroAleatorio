@@ -1,0 +1,5 @@
+[install]
+backend = "copyfile"
+
+[install.cache]
+dir = ".bun-cache"
